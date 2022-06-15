@@ -336,6 +336,7 @@ void convert_create_bmp_for_rect_in_circ_dimensions_to_integers(int accuracy_lev
 void usage_create_bmp_for_rect_in_circ(void);
 void convert_create_bmp_for_circ_in_rect_dimensions_to_integers(int accuracy_level);
 void usage_create_bmp_for_circ_in_rect(void);
+void usage_create_bmp_for_edge_coupled_coplanar_waveguide(void);
 void check_for_shorts(void);
 void usage_symmetrical_strip(void);
 void fill_image_vector_for_thin_strip(int W,int H, int w, unsigned char *unaligned_image_vector);
@@ -374,12 +375,14 @@ void print_data_for_two_conductor_lines(struct transmission_line_properties data
 void set_data_to_sensible_starting_values(struct transmission_line_properties *data);
 void check_parameters_of_create_bmp_for_microstrip_coupler(struct transmission_line_properties pcb);
 void convert_create_create_bmp_for_coupled_microstrip_dimensions_to_integers(struct transmission_line_properties *pcb);
+void convert_create_bmp_for_edge_coupled_coplanar_waveguide_dimensions_to_integers(struct transmission_line_properties *pcb);
 void usage_create_bmp_for_microstrip_coupler(void);
 void usage_find_optimal_dimensions_for_microstrip_coupler(void);
 void check_parameters_of_create_bmp_for_circ_in_circ(void);
 void check_parameters_of_create_bmp_for_circ_in_rect(void);
 void check_parameters_of_create_bmp_for_rect_in_circ(void);
 void check_parameters_of_create_bmp_for_rect_in_rect(void);
+void check_parameters_of_create_bmp_for_edge_coupled_coplanar_waveguide(struct transmission_line_properties pcb);
 void usage_create_bmp_for_symmetrical_stripline(void);
 void check_parameters_for_find_optimal_dimensions_for_microstrip_coupler (double h,double t,double Er1,double Er2,double ideal_Zodd,double ideal_Zeven);
 double *dvector(long nl, long nh);

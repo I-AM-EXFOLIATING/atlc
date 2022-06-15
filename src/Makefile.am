@@ -6,7 +6,8 @@ readbin create_bmp_for_symmetrical_stripline \
 design_coupler create_bmp_for_stripline_coupler \
 create_bmp_for_microstrip_coupler \
 find_optimal_dimensions_for_microstrip_coupler \
-create_bmp_for_rect_cen_in_rect_coupler 
+create_bmp_for_rect_cen_in_rect_coupler \
+create_bmp_for_edge_coupled_coplanar_waveguide
 
 atlc_SOURCES = atlc.c read_bitmap_file_headers.c \
 update_voltage_array.c \
@@ -149,6 +150,19 @@ gsl_definitions.h \
 gsl_sf_ellint_Kcomp.c
 create_bmp_for_stripline_coupler_LDADD = @LIBS@ 
 create_bmp_for_stripline_coupler_CFLAGS = @CFLAGS@ 
+
+create_bmp_for_edge_coupled_coplanar_waveguide_SOURCES = \
+usage_create_bmp_for_edge_coupled_coplanar_waveguide.c \
+create_bmp_for_edge_coupled_coplanar_waveguide.c get_Er1_and_Er2_colours.c \
+convert_create_bmp_for_edge_coupled_coplanar_waveguide.c \
+print_copyright.c  \
+write_bitmap_out.c memory.c \
+get_options.c check_parameters_of_create_bmp_for_edge_coupled_coplanar_waveguide.c \
+write_bitmap.c align_bitmap_image.c \
+fill_image_vector_for_create_bmp_for_edge_coupled_coplanar_waveguide.c \
+check_error.c exit_with_msg_and_exit_code.c \
+Erdata.h definitions.h exit_codes.h
+create_bmp_for_edge_coupled_coplanar_waveguide_LDADD = @LIBS@ 
 
 design_coupler_SOURCES = design_coupler.c usage_design_coupler.c \
 get_options.c print_copyright.c calculate_Zodd_and_Zeven.c \
